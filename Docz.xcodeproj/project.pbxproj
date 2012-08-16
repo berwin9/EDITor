@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		301EB0FA15DCB6CF008421E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0F915DCB6CF008421E8 /* UIKit.framework */; };
+		301EB0FC15DCB6CF008421E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FB15DCB6CF008421E8 /* Foundation.framework */; };
+		301EB0FE15DCB6CF008421E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FD15DCB6CF008421E8 /* CoreGraphics.framework */; };
+		301EB10415DCB6CF008421E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 301EB10215DCB6CF008421E8 /* InfoPlist.strings */; };
+		301EB10615DCB6CF008421E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB10515DCB6CF008421E8 /* main.m */; };
+		301EB10A15DCB6CF008421E8 /* DoczAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */; };
+		301EB10D15DCB6D0008421E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301EB10B15DCB6D0008421E8 /* MainStoryboard.storyboard */; };
+		301EB11815DCB6D0008421E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB11715DCB6D0008421E8 /* SenTestingKit.framework */; };
+		301EB11915DCB6D0008421E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0F915DCB6CF008421E8 /* UIKit.framework */; };
+		301EB11A15DCB6D0008421E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FB15DCB6CF008421E8 /* Foundation.framework */; };
+		301EB12215DCB6D0008421E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 301EB12015DCB6D0008421E8 /* InfoPlist.strings */; };
+		301EB12515DCB6D0008421E8 /* DoczTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12415DCB6D0008421E8 /* DoczTests.m */; };
+		301EB13015DCB751008421E8 /* DoczTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12F15DCB751008421E8 /* DoczTableViewController.m */; };
+		301EB13B15DCB978008421E8 /* EDINode.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB13A15DCB978008421E8 /* EDINode.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301EB11B15DCB6D0008421E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301EB0EC15DCB6CF008421E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301EB0F415DCB6CF008421E8;
+			remoteInfo = Docz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		301EB0F515DCB6CF008421E8 /* Docz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Docz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		301EB0F915DCB6CF008421E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		301EB0FB15DCB6CF008421E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		301EB0FD15DCB6CF008421E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		301EB10115DCB6CF008421E8 /* Docz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Docz-Info.plist"; sourceTree = "<group>"; };
+		301EB10315DCB6CF008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		301EB10515DCB6CF008421E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		301EB10715DCB6CF008421E8 /* Docz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docz-Prefix.pch"; sourceTree = "<group>"; };
+		301EB10815DCB6CF008421E8 /* DoczAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoczAppDelegate.h; sourceTree = "<group>"; };
+		301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoczAppDelegate.m; sourceTree = "<group>"; };
+		301EB10C15DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		301EB11615DCB6D0008421E8 /* DoczTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoczTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301EB11715DCB6D0008421E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		301EB11F15DCB6D0008421E8 /* DoczTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoczTests-Info.plist"; sourceTree = "<group>"; };
+		301EB12115DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		301EB12315DCB6D0008421E8 /* DoczTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoczTests.h; sourceTree = "<group>"; };
+		301EB12415DCB6D0008421E8 /* DoczTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoczTests.m; sourceTree = "<group>"; };
+		301EB12E15DCB751008421E8 /* DoczTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoczTableViewController.h; sourceTree = "<group>"; };
+		301EB12F15DCB751008421E8 /* DoczTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoczTableViewController.m; sourceTree = "<group>"; };
+		301EB13915DCB978008421E8 /* EDINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDINode.h; sourceTree = "<group>"; };
+		301EB13A15DCB978008421E8 /* EDINode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDINode.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		301EB0F215DCB6CF008421E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB0FA15DCB6CF008421E8 /* UIKit.framework in Frameworks */,
+				301EB0FC15DCB6CF008421E8 /* Foundation.framework in Frameworks */,
+				301EB0FE15DCB6CF008421E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301EB11215DCB6D0008421E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB11815DCB6D0008421E8 /* SenTestingKit.framework in Frameworks */,
+				301EB11915DCB6D0008421E8 /* UIKit.framework in Frameworks */,
+				301EB11A15DCB6D0008421E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		301EB0EA15DCB6CF008421E8 = {
+			isa = PBXGroup;
+			children = (
+				301EB0FF15DCB6CF008421E8 /* Docz */,
+				301EB11D15DCB6D0008421E8 /* DoczTests */,
+				301EB0F815DCB6CF008421E8 /* Frameworks */,
+				301EB0F615DCB6CF008421E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		301EB0F615DCB6CF008421E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301EB0F515DCB6CF008421E8 /* Docz.app */,
+				301EB11615DCB6D0008421E8 /* DoczTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		301EB0F815DCB6CF008421E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				301EB0F915DCB6CF008421E8 /* UIKit.framework */,
+				301EB0FB15DCB6CF008421E8 /* Foundation.framework */,
+				301EB0FD15DCB6CF008421E8 /* CoreGraphics.framework */,
+				301EB11715DCB6D0008421E8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		301EB0FF15DCB6CF008421E8 /* Docz */ = {
+			isa = PBXGroup;
+			children = (
+				301EB10815DCB6CF008421E8 /* DoczAppDelegate.h */,
+				301EB13915DCB978008421E8 /* EDINode.h */,
+				301EB13A15DCB978008421E8 /* EDINode.m */,
+				301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */,
+				301EB10B15DCB6D0008421E8 /* MainStoryboard.storyboard */,
+				301EB12E15DCB751008421E8 /* DoczTableViewController.h */,
+				301EB12F15DCB751008421E8 /* DoczTableViewController.m */,
+				301EB10015DCB6CF008421E8 /* Supporting Files */,
+			);
+			path = Docz;
+			sourceTree = "<group>";
+		};
+		301EB10015DCB6CF008421E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				301EB10115DCB6CF008421E8 /* Docz-Info.plist */,
+				301EB10215DCB6CF008421E8 /* InfoPlist.strings */,
+				301EB10515DCB6CF008421E8 /* main.m */,
+				301EB10715DCB6CF008421E8 /* Docz-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		301EB11D15DCB6D0008421E8 /* DoczTests */ = {
+			isa = PBXGroup;
+			children = (
+				301EB12315DCB6D0008421E8 /* DoczTests.h */,
+				301EB12415DCB6D0008421E8 /* DoczTests.m */,
+				301EB11E15DCB6D0008421E8 /* Supporting Files */,
+			);
+			path = DoczTests;
+			sourceTree = "<group>";
+		};
+		301EB11E15DCB6D0008421E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				301EB11F15DCB6D0008421E8 /* DoczTests-Info.plist */,
+				301EB12015DCB6D0008421E8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		301EB0F415DCB6CF008421E8 /* Docz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "Docz" */;
+			buildPhases = (
+				301EB0F115DCB6CF008421E8 /* Sources */,
+				301EB0F215DCB6CF008421E8 /* Frameworks */,
+				301EB0F315DCB6CF008421E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Docz;
+			productName = Docz;
+			productReference = 301EB0F515DCB6CF008421E8 /* Docz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		301EB11515DCB6D0008421E8 /* DoczTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "DoczTests" */;
+			buildPhases = (
+				301EB11115DCB6D0008421E8 /* Sources */,
+				301EB11215DCB6D0008421E8 /* Frameworks */,
+				301EB11315DCB6D0008421E8 /* Resources */,
+				301EB11415DCB6D0008421E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301EB11C15DCB6D0008421E8 /* PBXTargetDependency */,
+			);
+			name = DoczTests;
+			productName = DoczTests;
+			productReference = 301EB11615DCB6D0008421E8 /* DoczTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		301EB0EC15DCB6CF008421E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Docz;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = win;
+			};
+			buildConfigurationList = 301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "Docz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 301EB0EA15DCB6CF008421E8;
+			productRefGroup = 301EB0F615DCB6CF008421E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				301EB0F415DCB6CF008421E8 /* Docz */,
+				301EB11515DCB6D0008421E8 /* DoczTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		301EB0F315DCB6CF008421E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB10415DCB6CF008421E8 /* InfoPlist.strings in Resources */,
+				301EB10D15DCB6D0008421E8 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301EB11315DCB6D0008421E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB12215DCB6D0008421E8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		301EB11415DCB6D0008421E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		301EB0F115DCB6CF008421E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB10615DCB6CF008421E8 /* main.m in Sources */,
+				301EB10A15DCB6CF008421E8 /* DoczAppDelegate.m in Sources */,
+				301EB13015DCB751008421E8 /* DoczTableViewController.m in Sources */,
+				301EB13B15DCB978008421E8 /* EDINode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301EB11115DCB6D0008421E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB12515DCB6D0008421E8 /* DoczTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301EB11C15DCB6D0008421E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301EB0F415DCB6CF008421E8 /* Docz */;
+			targetProxy = 301EB11B15DCB6D0008421E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		301EB10215DCB6CF008421E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301EB10315DCB6CF008421E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		301EB10B15DCB6D0008421E8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301EB10C15DCB6D0008421E8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		301EB12015DCB6D0008421E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301EB12115DCB6D0008421E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		301EB12615DCB6D0008421E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		301EB12715DCB6D0008421E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		301EB12915DCB6D0008421E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
+				INFOPLIST_FILE = "Docz/Docz-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		301EB12A15DCB6D0008421E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
+				INFOPLIST_FILE = "Docz/Docz-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		301EB12C15DCB6D0008421E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Docz.app/Docz";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
+				INFOPLIST_FILE = "DoczTests/DoczTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		301EB12D15DCB6D0008421E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Docz.app/Docz";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
+				INFOPLIST_FILE = "DoczTests/DoczTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "Docz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301EB12615DCB6D0008421E8 /* Debug */,
+				301EB12715DCB6D0008421E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "Docz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301EB12915DCB6D0008421E8 /* Debug */,
+				301EB12A15DCB6D0008421E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "DoczTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301EB12C15DCB6D0008421E8 /* Debug */,
+				301EB12D15DCB6D0008421E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 301EB0EC15DCB6CF008421E8 /* Project object */;
+}

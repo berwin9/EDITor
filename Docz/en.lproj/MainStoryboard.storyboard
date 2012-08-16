@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zCY-dR-Q36">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+    </dependencies>
+    <scenes>
+        <!--Docz Table View Controller - EDItor-->
+        <scene sceneID="vhD-qY-WrX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmn-3c-UCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Knx-I5-TRB" customClass="DoczTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HXT-wU-TGO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="o1K-EW-5qh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Knx-I5-TRB" id="7lH-QA-lXq"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="protoCell" id="YsY-au-5iq">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Knx-I5-TRB" id="Obf-NU-oyv"/>
+                            <outlet property="delegate" destination="Knx-I5-TRB" id="fJu-iF-Dvl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="EDItor" id="cel-ov-D5t"/>
+                    <connections>
+                        <outlet property="nodeSearchBar" destination="o1K-EW-5qh" id="Lvb-DO-gNA"/>
+                        <outlet property="searchDisplayController" destination="G1D-xo-tRi" id="gYc-Jn-PcL"/>
+                    </connections>
+                </tableViewController>
+                <searchDisplayController id="G1D-xo-tRi">
+                    <connections>
+                        <outlet property="delegate" destination="Knx-I5-TRB" id="c7R-XH-hDq"/>
+                        <outlet property="searchBar" destination="o1K-EW-5qh" id="tfr-tZ-SIt"/>
+                        <outlet property="searchContentsController" destination="Knx-I5-TRB" id="CwJ-dc-Nkp"/>
+                        <outlet property="searchResultsDataSource" destination="Knx-I5-TRB" id="uUj-Zv-xXN"/>
+                        <outlet property="searchResultsDelegate" destination="Knx-I5-TRB" id="Nr6-cL-dHG"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="248" y="-574"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u3C-MI-xaZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtV-B2-KiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="zCY-dR-Q36" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8W9-sB-3sZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Knx-I5-TRB" kind="relationship" relationship="rootViewController" id="0td-4a-nRQ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-286" y="-574"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
