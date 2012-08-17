@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoczAppDelegate : UIResponder <UIApplicationDelegate>
+@interface EDITorAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

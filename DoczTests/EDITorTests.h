@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface DoczTests : SenTestCase
+@interface EDITorTests : SenTestCase
 
 @end

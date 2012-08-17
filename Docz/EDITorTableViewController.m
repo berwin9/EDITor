@@ -9,14 +9,14 @@
 #define bgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #define localUrl [NSURL URLWithString:@"http://localhost:5000/document"]
 
-#import "DoczTableViewController.h"
+#import "EDITorTableViewController.h"
 #import "EDINode.h"
 
-@interface DoczTableViewController()
+@interface EDITorTableViewController()
 
 @end
 
-@implementation DoczTableViewController
+@implementation EDITorTableViewController
 
 @synthesize nodeArray = _nodeArray;
 @synthesize filteredNodeArray = _filteredNodeArray;

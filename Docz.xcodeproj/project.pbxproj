@@ -12,14 +12,14 @@
 		301EB0FE15DCB6CF008421E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FD15DCB6CF008421E8 /* CoreGraphics.framework */; };
 		301EB10415DCB6CF008421E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 301EB10215DCB6CF008421E8 /* InfoPlist.strings */; };
 		301EB10615DCB6CF008421E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB10515DCB6CF008421E8 /* main.m */; };
-		301EB10A15DCB6CF008421E8 /* DoczAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */; };
+		301EB10A15DCB6CF008421E8 /* EDITorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB10915DCB6CF008421E8 /* EDITorAppDelegate.m */; };
 		301EB10D15DCB6D0008421E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301EB10B15DCB6D0008421E8 /* MainStoryboard.storyboard */; };
 		301EB11815DCB6D0008421E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB11715DCB6D0008421E8 /* SenTestingKit.framework */; };
 		301EB11915DCB6D0008421E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0F915DCB6CF008421E8 /* UIKit.framework */; };
 		301EB11A15DCB6D0008421E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FB15DCB6CF008421E8 /* Foundation.framework */; };
 		301EB12215DCB6D0008421E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 301EB12015DCB6D0008421E8 /* InfoPlist.strings */; };
-		301EB12515DCB6D0008421E8 /* DoczTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12415DCB6D0008421E8 /* DoczTests.m */; };
-		301EB13015DCB751008421E8 /* DoczTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12F15DCB751008421E8 /* DoczTableViewController.m */; };
+		301EB12515DCB6D0008421E8 /* EDITorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12415DCB6D0008421E8 /* EDITorTests.m */; };
+		301EB13015DCB751008421E8 /* EDITorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB12F15DCB751008421E8 /* EDITorTableViewController.m */; };
 		301EB13B15DCB978008421E8 /* EDINode.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB13A15DCB978008421E8 /* EDINode.m */; };
 /* End PBXBuildFile section */
 
@@ -42,17 +42,17 @@
 		301EB10315DCB6CF008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		301EB10515DCB6CF008421E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		301EB10715DCB6CF008421E8 /* Docz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docz-Prefix.pch"; sourceTree = "<group>"; };
-		301EB10815DCB6CF008421E8 /* DoczAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoczAppDelegate.h; sourceTree = "<group>"; };
-		301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoczAppDelegate.m; sourceTree = "<group>"; };
+		301EB10815DCB6CF008421E8 /* EDITorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDITorAppDelegate.h; sourceTree = "<group>"; };
+		301EB10915DCB6CF008421E8 /* EDITorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDITorAppDelegate.m; sourceTree = "<group>"; };
 		301EB10C15DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		301EB11615DCB6D0008421E8 /* DoczTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoczTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301EB11715DCB6D0008421E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		301EB11F15DCB6D0008421E8 /* DoczTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoczTests-Info.plist"; sourceTree = "<group>"; };
 		301EB12115DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		301EB12315DCB6D0008421E8 /* DoczTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoczTests.h; sourceTree = "<group>"; };
-		301EB12415DCB6D0008421E8 /* DoczTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoczTests.m; sourceTree = "<group>"; };
-		301EB12E15DCB751008421E8 /* DoczTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoczTableViewController.h; sourceTree = "<group>"; };
-		301EB12F15DCB751008421E8 /* DoczTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoczTableViewController.m; sourceTree = "<group>"; };
+		301EB12315DCB6D0008421E8 /* EDITorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDITorTests.h; sourceTree = "<group>"; };
+		301EB12415DCB6D0008421E8 /* EDITorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDITorTests.m; sourceTree = "<group>"; };
+		301EB12E15DCB751008421E8 /* EDITorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorTableViewController.h; sourceTree = "<group>"; };
+		301EB12F15DCB751008421E8 /* EDITorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorTableViewController.m; sourceTree = "<group>"; };
 		301EB13915DCB978008421E8 /* EDINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDINode.h; sourceTree = "<group>"; };
 		301EB13A15DCB978008421E8 /* EDINode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDINode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,13 +114,13 @@
 		301EB0FF15DCB6CF008421E8 /* Docz */ = {
 			isa = PBXGroup;
 			children = (
-				301EB10815DCB6CF008421E8 /* DoczAppDelegate.h */,
+				301EB10815DCB6CF008421E8 /* EDITorAppDelegate.h */,
 				301EB13915DCB978008421E8 /* EDINode.h */,
 				301EB13A15DCB978008421E8 /* EDINode.m */,
-				301EB10915DCB6CF008421E8 /* DoczAppDelegate.m */,
+				301EB10915DCB6CF008421E8 /* EDITorAppDelegate.m */,
 				301EB10B15DCB6D0008421E8 /* MainStoryboard.storyboard */,
-				301EB12E15DCB751008421E8 /* DoczTableViewController.h */,
-				301EB12F15DCB751008421E8 /* DoczTableViewController.m */,
+				301EB12E15DCB751008421E8 /* EDITorTableViewController.h */,
+				301EB12F15DCB751008421E8 /* EDITorTableViewController.m */,
 				301EB10015DCB6CF008421E8 /* Supporting Files */,
 			);
 			path = Docz;
@@ -140,8 +140,8 @@
 		301EB11D15DCB6D0008421E8 /* DoczTests */ = {
 			isa = PBXGroup;
 			children = (
-				301EB12315DCB6D0008421E8 /* DoczTests.h */,
-				301EB12415DCB6D0008421E8 /* DoczTests.m */,
+				301EB12315DCB6D0008421E8 /* EDITorTests.h */,
+				301EB12415DCB6D0008421E8 /* EDITorTests.m */,
 				301EB11E15DCB6D0008421E8 /* Supporting Files */,
 			);
 			path = DoczTests;
@@ -265,8 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301EB10615DCB6CF008421E8 /* main.m in Sources */,
-				301EB10A15DCB6CF008421E8 /* DoczAppDelegate.m in Sources */,
-				301EB13015DCB751008421E8 /* DoczTableViewController.m in Sources */,
+				301EB10A15DCB6CF008421E8 /* EDITorAppDelegate.m in Sources */,
+				301EB13015DCB751008421E8 /* EDITorTableViewController.m in Sources */,
 				301EB13B15DCB978008421E8 /* EDINode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				301EB12515DCB6D0008421E8 /* DoczTests.m in Sources */,
+				301EB12515DCB6D0008421E8 /* EDITorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +441,7 @@
 				301EB12A15DCB6D0008421E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "DoczTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +450,7 @@
 				301EB12D15DCB6D0008421E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 win. All rights reserved.
 //
 
-#import "DoczAppDelegate.h"
+#import "EDITorAppDelegate.h"
 
-@implementation DoczAppDelegate
+@implementation EDITorAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

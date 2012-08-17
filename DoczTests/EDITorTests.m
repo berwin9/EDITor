@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 win. All rights reserved.
 //
 
-#import "DoczTests.h"
+#import "EDITorTests.h"
 
-@implementation DoczTests
+@implementation EDITorTests
 
 - (void)setUp
 {

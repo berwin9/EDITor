@@ -5,11 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
-        <!--Docz Table View Controller - EDItor-->
+        <!--Tor Table View Controller - EDItor-->
         <scene sceneID="vhD-qY-WrX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmn-3c-UCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Knx-I5-TRB" customClass="DoczTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Knx-I5-TRB" customClass="EDITorTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HXT-wU-TGO">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
