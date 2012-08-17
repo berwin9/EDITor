@@ -6,6 +6,9 @@
 //  Copyright (c) 2012 win. All rights reserved.
 //
 
+#define bgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+#define localUrl [NSURL URLWithString:@"http://localhost:5000/document"]
+
 #import "DoczTableViewController.h"
 #import "EDINode.h"
 
@@ -29,17 +32,38 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    dispatch_async(bgQueue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:localUrl];
+        [self performSelectorOnMainThread:@selector(fetchData:)
+                               withObject:data
+                            waitUntilDone:YES];
+    });
     [self.nodeSearchBar setShowsScopeBar:NO];
     [self.nodeSearchBar sizeToFit];
     CGRect newBounds = self.tableView.bounds;
     newBounds.origin.y = newBounds.origin.y + self.nodeSearchBar.bounds.size.height;
     self.tableView.bounds = newBounds;
-    self.nodeArray = [NSArray arrayWithObjects:
-        
-    nil];
+
+}
+
+-(void)fetchData:(NSData *)responseData {
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                         options:kNilOptions
+                                                           error:&error];
+//    id tables = [[[[json objectForKey:@"TS_810"] objectFtorKey:@"collection"] objectForKey:@"Table_1"] objectForKey:@"collection"];
+    id tables = [json valueForKeyPath:@"TS_810.collection"];
+    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    for (id key in tables) {
+        NSDictionary *child = [tables objectForKey:key];
+        [keys addObject:[[EDINode alloc] initWithLabel:[child objectForKey:@"name"]
+                                               ediName:[child objectForKey:@"fullName"]
+                                              nodeType:@"s"
+                                            collection:[child objectForKey:@"collection"]]];
+    }   
+    self.nodeArray = [NSArray arrayWithArray:keys];
     self.filteredNodeArray = [NSMutableArray arrayWithCapacity:[self.nodeArray count]];
     [self.tableView reloadData];
-    
 }
 
 -(void)viewDidUnload {
@@ -62,14 +86,13 @@
 numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         return [self.filteredNodeArray count];
-    } else {
-        return [self.nodeArray count];
-    };
+    }
+    return [self.nodeArray count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"protoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
@@ -81,7 +104,7 @@ numberOfRowsInSection:(NSInteger)section {
     } else {
         node = [self.nodeArray objectAtIndex:indexPath.row];
     }
-    cell.textLabel.text = node.name;
+    cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
@@ -89,9 +112,9 @@ numberOfRowsInSection:(NSInteger)section {
 #pragma mark - Content Filtering
 -(void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope {
     [self.filteredNodeArray removeAllObjects];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
     NSArray *tempArray = [self.nodeArray filteredArrayUsingPredicate:predicate];
-    if (![scope isEqualToString:@"All"]) {
+    if (![scope isEqualToString:@"Header"]) {
         NSPredicate *scopePredicate = [NSPredicate predicateWithFormat:@"SELF.category contains[c] %@", scope];
         tempArray = [tempArray filteredArrayUsingPredicate:scopePredicate];
     }
@@ -103,7 +126,8 @@ numberOfRowsInSection:(NSInteger)section {
 shouldReloadTableForSearchString:(NSString *)searchString {
     [self filterContentForSearchText:searchString
                                scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
     return YES;
 }
 
@@ -115,27 +139,27 @@ shouldReloadTableForSearchScope:(NSInteger)searchOption {
     return YES;
 }
 
-#pragma mark - TableView Delegate
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
-}
+//#pragma mark - TableView Delegate
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
+//}
 
-#pragma mark - Segue
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"candyDetail"]) {
-        UIViewController *candyDetailViewController = [segue destinationViewController];
-        NSIndexPath *indexPath = nil;
-        NSString *destinationTitle = nil;
-        if (sender == self.searchDisplayController.searchResultsTableView) {
-            indexPath = [self.searchDisplayController.searchResultsTableView
-                         indexPathForSelectedRow];
-            destinationTitle = [[self.filteredNodeArray objectAtIndex:[indexPath row]] name];
-        } else {
-            indexPath = [self.tableView indexPathForSelectedRow];
-            destinationTitle = [[self.nodeArray objectAtIndex:[indexPath row]] name];
-        }
-        [candyDetailViewController setTitle:destinationTitle];
-    }
-}
+//#pragma mark - Segue
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"candyDetail"]) {
+//        UIViewController *candyDetailViewController = [segue destinationViewController];
+//        NSIndexPath *indexPath = nil;
+//        NSString *destinationTitle = nil;
+//        if (sender == self.searchDisplayController.searchResultsTableView) {
+//            indexPath = [self.searchDisplayController.searchResultsTableView
+//                         indexPathForSelectedRow];
+//            destinationTitle = [[self.filteredNodeArray objectAtIndex:[indexPath row]] name];
+//        } else {
+//            indexPath = [self.tableView indexPathForSelectedRow];
+//            destinationTitle = [[self.nodeArray objectAtIndex:[indexPath row]] name];
+//        }
+//        [candyDetailViewController setTitle:destinationTitle];
+//    }
+//}
 
 @end
