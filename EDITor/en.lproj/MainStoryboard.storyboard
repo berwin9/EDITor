@@ -67,35 +67,6 @@
             </objects>
             <point key="canvasLocation" x="210" y="-1000"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="eyy-u2-hT5">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uk3-gG-yEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="cff-OX-8G4" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="t6g-Iw-Z7e">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UE4-n2-922">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="cff-OX-8G4" id="GIg-Yv-TvY"/>
-                            <outlet property="delegate" destination="cff-OX-8G4" id="XAf-to-FTt"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="671" y="-991"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="u3C-MI-xaZ">
             <objects>
@@ -112,6 +83,15 @@
             <point key="canvasLocation" x="-324" y="-1000"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EDITorTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EDITorTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToSearch:"/>
+                <relationship kind="outlet" name="nodeSearchBar" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
