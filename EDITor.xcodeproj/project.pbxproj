@@ -14,15 +14,14 @@
 		301EB11915DCB6D0008421E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0F915DCB6CF008421E8 /* UIKit.framework */; };
 		301EB11A15DCB6D0008421E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301EB0FB15DCB6CF008421E8 /* Foundation.framework */; };
 		3043E90515DE05FC00D73783 /* EDINode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E8F915DE05FC00D73783 /* EDINode.m */; };
-		3043E90615DE05FC00D73783 /* EDITor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3043E8FA15DE05FC00D73783 /* EDITor-Info.plist */; };
 		3043E90715DE05FC00D73783 /* EDITorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */; };
 		3043E90815DE05FC00D73783 /* EDITorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */; };
-		3043E90915DE05FC00D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90015DE05FC00D73783 /* InfoPlist.strings */; };
 		3043E90A15DE05FC00D73783 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */; };
 		3043E90B15DE05FC00D73783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90415DE05FC00D73783 /* main.m */; };
 		3043E91215DE060500D73783 /* EDITorTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90D15DE060500D73783 /* EDITorTests-Info.plist */; };
 		3043E91315DE060500D73783 /* EDITorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90F15DE060500D73783 /* EDITorTests.m */; };
 		3043E91415DE060500D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E91015DE060500D73783 /* InfoPlist.strings */; };
+		3043E91F15DE06B800D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90015DE05FC00D73783 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,15 +117,12 @@
 			children = (
 				3043E8F815DE05FC00D73783 /* EDINode.h */,
 				3043E8F915DE05FC00D73783 /* EDINode.m */,
-				3043E8FA15DE05FC00D73783 /* EDITor-Info.plist */,
-				3043E8FB15DE05FC00D73783 /* EDITor-Prefix.pch */,
 				3043E8FC15DE05FC00D73783 /* EDITorAppDelegate.h */,
 				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
 				3043E8FE15DE05FC00D73783 /* EDITorTableViewController.h */,
 				3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */,
-				3043E90015DE05FC00D73783 /* InfoPlist.strings */,
 				3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */,
-				3043E90415DE05FC00D73783 /* main.m */,
+				3043E92015DE071500D73783 /* Supporting Files */,
 			);
 			path = EDITor;
 			sourceTree = "<group>";
@@ -140,6 +136,17 @@
 				3043E91015DE060500D73783 /* InfoPlist.strings */,
 			);
 			path = EDITorTests;
+			sourceTree = "<group>";
+		};
+		3043E92015DE071500D73783 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8FB15DE05FC00D73783 /* EDITor-Prefix.pch */,
+				3043E90415DE05FC00D73783 /* main.m */,
+				3043E8FA15DE05FC00D73783 /* EDITor-Info.plist */,
+				3043E90015DE05FC00D73783 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3043E90615DE05FC00D73783 /* EDITor-Info.plist in Resources */,
-				3043E90915DE05FC00D73783 /* InfoPlist.strings in Resources */,
 				3043E90A15DE05FC00D73783 /* MainStoryboard.storyboard in Resources */,
+				3043E91F15DE06B800D73783 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

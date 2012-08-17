@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
-               BuildableName = "Docz.app"
+               BuildableName = "EDITor.app"
                BlueprintName = "EDITor"
                ReferencedContainer = "container:EDITor.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "301EB11515DCB6D0008421E8"
-               BuildableName = "DoczTests.octest"
+               BuildableName = "EDITorTests.octest"
                BlueprintName = "EDITorTests"
                ReferencedContainer = "container:EDITor.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
-            BuildableName = "Docz.app"
+            BuildableName = "EDITor.app"
             BlueprintName = "EDITor"
             ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
-            BuildableName = "Docz.app"
+            BuildableName = "EDITor.app"
             BlueprintName = "EDITor"
             ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
-            BuildableName = "Docz.app"
+            BuildableName = "EDITor.app"
             BlueprintName = "EDITor"
             ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
