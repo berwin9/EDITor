@@ -10,9 +10,13 @@
 
 @interface EDINode : NSObject
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *label;
+@property (nonatomic, copy) NSString *ediName;
 @property (nonatomic, copy) NSString *nodeType;
+@property (nonatomic, copy) id collection;
 
--(id)initWithName:(NSString *)name type:(NSString *)type;
+-(id)initWithLabel:(NSString *)label ediName:(NSString *)ediName nodeType:(NSString *)nodeType collection:(id)collection;
+
++(NSArray *)createModelPoolWithTsetDict:(NSDictionary *)json;
 
 @end
