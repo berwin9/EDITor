@@ -24,6 +24,7 @@
         self.label = label;
         self.ediName = ediName;
         self.nodeType = nodeType;
+        self.collection = collection;
     }
     return self;
 }
