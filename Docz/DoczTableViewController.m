@@ -51,17 +51,24 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
                                                            error:&error];
-//    id tables = [[[[json objectForKey:@"TS_810"] objectFtorKey:@"collection"] objectForKey:@"Table_1"] objectForKey:@"collection"];
-    id tables = [json valueForKeyPath:@"TS_810.collection"];
-    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
+    NSArray *sortedKeys = [tables keysSortedByValueUsingComparator:^(id obj1, id obj2) {
+        static NSString *sep = @"_", *keyToComp = @"fullName";
+        NSString *name1= [[[obj1 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
+        NSString *name2 = [[[obj2 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
+        return [name1 caseInsensitiveCompare:name2];
+    }];
+    int ctr = 0;
+    NSMutableArray *models = [[NSMutableArray alloc] init];
     for (id key in tables) {
-        NSDictionary *child = [tables objectForKey:key];
-        [keys addObject:[[EDINode alloc] initWithLabel:[child objectForKey:@"name"]
-                                               ediName:[child objectForKey:@"fullName"]
-                                              nodeType:@"s"
-                                            collection:[child objectForKey:@"collection"]]];
-    }   
-    self.nodeArray = [NSArray arrayWithArray:keys];
+        NSDictionary *child = [tables objectForKey:[sortedKeys objectAtIndex:ctr]];
+        [models addObject:[[EDINode alloc] initWithLabel:[child objectForKey:@"name"]
+                                                 ediName:[child objectForKey:@"fullName"]
+                                                nodeType:@"s"
+                                              collection:[child objectForKey:@"collection"]]];
+        ctr++;
+    }
+    self.nodeArray = [NSArray arrayWithArray:models];
     self.filteredNodeArray = [NSMutableArray arrayWithCapacity:[self.nodeArray count]];
     [self.tableView reloadData];
 }
