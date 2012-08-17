@@ -18,7 +18,6 @@
 		3043E90815DE05FC00D73783 /* EDITorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */; };
 		3043E90A15DE05FC00D73783 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */; };
 		3043E90B15DE05FC00D73783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90415DE05FC00D73783 /* main.m */; };
-		3043E91215DE060500D73783 /* EDITorTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90D15DE060500D73783 /* EDITorTests-Info.plist */; };
 		3043E91315DE060500D73783 /* EDITorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90F15DE060500D73783 /* EDITorTests.m */; };
 		3043E91415DE060500D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E91015DE060500D73783 /* InfoPlist.strings */; };
 		3043E91F15DE06B800D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90015DE05FC00D73783 /* InfoPlist.strings */; };
@@ -30,7 +29,7 @@
 			containerPortal = 301EB0EC15DCB6CF008421E8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 301EB0F415DCB6CF008421E8;
-			remoteInfo = Docz;
+			remoteInfo = EDITor;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -165,7 +164,7 @@
 			dependencies = (
 			);
 			name = EDITor;
-			productName = Docz;
+			productName = EDITor;
 			productReference = 301EB0F515DCB6CF008421E8 /* EDITor.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -184,7 +183,7 @@
 				301EB11C15DCB6D0008421E8 /* PBXTargetDependency */,
 			);
 			name = EDITorTests;
-			productName = DoczTests;
+			productName = EDITorTests;
 			productReference = 301EB11615DCB6D0008421E8 /* EDITorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -194,7 +193,7 @@
 		301EB0EC15DCB6CF008421E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Docz;
+				CLASSPREFIX = EDITor;
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = win;
 			};
@@ -230,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3043E91215DE060500D73783 /* EDITorTests-Info.plist in Resources */,
 				3043E91415DE060500D73783 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,8 +362,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/EDITor-Prefix.pch";
-				INFOPLIST_FILE = "Docz/EDITor-Info.plist";
+				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "EDITor/EDITor-Info.plist";
 				PRODUCT_NAME = EDITor;
 				WRAPPER_EXTENSION = app;
 			};
@@ -375,8 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/EDITor-Prefix.pch";
-				INFOPLIST_FILE = "Docz/EDITor-Info.plist";
+				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "EDITor/EDITor-Info.plist";
 				PRODUCT_NAME = EDITor;
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,14 +383,14 @@
 		301EB12C15DCB6D0008421E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Docz.app/Docz";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EDITor.app/EDITor";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "DoczTests/EDITorTests-Info.plist";
+				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "EDITorTests/EDITorTests-Info.plist";
 				PRODUCT_NAME = EDITorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -402,14 +400,14 @@
 		301EB12D15DCB6D0008421E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Docz.app/Docz";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EDITor.app/EDITor";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "DoczTests/EDITorTests-Info.plist";
+				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "EDITorTests/EDITorTests-Info.plist";
 				PRODUCT_NAME = EDITorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
