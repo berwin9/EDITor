@@ -54,7 +54,7 @@
     NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
     NSArray *sortedKeys = [tables keysSortedByValueUsingComparator:^(id obj1, id obj2) {
         static NSString *sep = @"_", *keyToComp = @"fullName";
-        NSString *name1= [[[obj1 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
+        NSString *name1 = [[[obj1 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
         NSString *name2 = [[[obj2 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
         return [name1 caseInsensitiveCompare:name2];
     }];
