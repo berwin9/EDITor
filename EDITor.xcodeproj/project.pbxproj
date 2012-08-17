@@ -34,20 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		301EB0F515DCB6CF008421E8 /* Docz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Docz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		301EB0F515DCB6CF008421E8 /* EDITor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDITor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301EB0F915DCB6CF008421E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		301EB0FB15DCB6CF008421E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		301EB0FD15DCB6CF008421E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		301EB10115DCB6CF008421E8 /* Docz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Docz-Info.plist"; sourceTree = "<group>"; };
+		301EB10115DCB6CF008421E8 /* EDITor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EDITor-Info.plist"; sourceTree = "<group>"; };
 		301EB10315DCB6CF008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		301EB10515DCB6CF008421E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		301EB10715DCB6CF008421E8 /* Docz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docz-Prefix.pch"; sourceTree = "<group>"; };
+		301EB10715DCB6CF008421E8 /* EDITor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EDITor-Prefix.pch"; sourceTree = "<group>"; };
 		301EB10815DCB6CF008421E8 /* EDITorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDITorAppDelegate.h; sourceTree = "<group>"; };
 		301EB10915DCB6CF008421E8 /* EDITorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDITorAppDelegate.m; sourceTree = "<group>"; };
 		301EB10C15DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		301EB11615DCB6D0008421E8 /* DoczTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoczTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301EB11615DCB6D0008421E8 /* EDITorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDITorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301EB11715DCB6D0008421E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		301EB11F15DCB6D0008421E8 /* DoczTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoczTests-Info.plist"; sourceTree = "<group>"; };
+		301EB11F15DCB6D0008421E8 /* EDITorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EDITorTests-Info.plist"; sourceTree = "<group>"; };
 		301EB12115DCB6D0008421E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		301EB12315DCB6D0008421E8 /* EDITorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDITorTests.h; sourceTree = "<group>"; };
 		301EB12415DCB6D0008421E8 /* EDITorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDITorTests.m; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		301EB0F615DCB6CF008421E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				301EB0F515DCB6CF008421E8 /* Docz.app */,
-				301EB11615DCB6D0008421E8 /* DoczTests.octest */,
+				301EB0F515DCB6CF008421E8 /* EDITor.app */,
+				301EB11615DCB6D0008421E8 /* EDITorTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,10 +129,10 @@
 		301EB10015DCB6CF008421E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				301EB10115DCB6CF008421E8 /* Docz-Info.plist */,
+				301EB10115DCB6CF008421E8 /* EDITor-Info.plist */,
 				301EB10215DCB6CF008421E8 /* InfoPlist.strings */,
 				301EB10515DCB6CF008421E8 /* main.m */,
-				301EB10715DCB6CF008421E8 /* Docz-Prefix.pch */,
+				301EB10715DCB6CF008421E8 /* EDITor-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 		301EB11E15DCB6D0008421E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				301EB11F15DCB6D0008421E8 /* DoczTests-Info.plist */,
+				301EB11F15DCB6D0008421E8 /* EDITorTests-Info.plist */,
 				301EB12015DCB6D0008421E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		301EB0F415DCB6CF008421E8 /* Docz */ = {
+		301EB0F415DCB6CF008421E8 /* EDITor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "Docz" */;
+			buildConfigurationList = 301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "EDITor" */;
 			buildPhases = (
 				301EB0F115DCB6CF008421E8 /* Sources */,
 				301EB0F215DCB6CF008421E8 /* Frameworks */,
@@ -171,14 +171,14 @@
 			);
 			dependencies = (
 			);
-			name = Docz;
+			name = EDITor;
 			productName = Docz;
-			productReference = 301EB0F515DCB6CF008421E8 /* Docz.app */;
+			productReference = 301EB0F515DCB6CF008421E8 /* EDITor.app */;
 			productType = "com.apple.product-type.application";
 		};
-		301EB11515DCB6D0008421E8 /* DoczTests */ = {
+		301EB11515DCB6D0008421E8 /* EDITorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "DoczTests" */;
+			buildConfigurationList = 301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "EDITorTests" */;
 			buildPhases = (
 				301EB11115DCB6D0008421E8 /* Sources */,
 				301EB11215DCB6D0008421E8 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				301EB11C15DCB6D0008421E8 /* PBXTargetDependency */,
 			);
-			name = DoczTests;
+			name = EDITorTests;
 			productName = DoczTests;
-			productReference = 301EB11615DCB6D0008421E8 /* DoczTests.octest */;
+			productReference = 301EB11615DCB6D0008421E8 /* EDITorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +205,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = win;
 			};
-			buildConfigurationList = 301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "Docz" */;
+			buildConfigurationList = 301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "EDITor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,8 +217,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				301EB0F415DCB6CF008421E8 /* Docz */,
-				301EB11515DCB6D0008421E8 /* DoczTests */,
+				301EB0F415DCB6CF008421E8 /* EDITor */,
+				301EB11515DCB6D0008421E8 /* EDITorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 /* Begin PBXTargetDependency section */
 		301EB11C15DCB6D0008421E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 301EB0F415DCB6CF008421E8 /* Docz */;
+			target = 301EB0F415DCB6CF008421E8 /* EDITor */;
 			targetProxy = 301EB11B15DCB6D0008421E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -370,9 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "Docz/Docz-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Docz/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "Docz/EDITor-Info.plist";
+				PRODUCT_NAME = EDITor;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -381,9 +381,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "Docz/Docz-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Docz/EDITor-Prefix.pch";
+				INFOPLIST_FILE = "Docz/EDITor-Info.plist";
+				PRODUCT_NAME = EDITor;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -398,8 +398,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "DoczTests/DoczTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DoczTests/EDITorTests-Info.plist";
+				PRODUCT_NAME = EDITorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -415,8 +415,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Docz/Docz-Prefix.pch";
-				INFOPLIST_FILE = "DoczTests/DoczTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DoczTests/EDITorTests-Info.plist";
+				PRODUCT_NAME = EDITorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "Docz" */ = {
+		301EB0EF15DCB6CF008421E8 /* Build configuration list for PBXProject "EDITor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				301EB12615DCB6D0008421E8 /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "Docz" */ = {
+		301EB12815DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "EDITor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				301EB12915DCB6D0008421E8 /* Debug */,
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "DoczTests" */ = {
+		301EB12B15DCB6D0008421E8 /* Build configuration list for PBXNativeTarget "EDITorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				301EB12C15DCB6D0008421E8 /* Debug */,

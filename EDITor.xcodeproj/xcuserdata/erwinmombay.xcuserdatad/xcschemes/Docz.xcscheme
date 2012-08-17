@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
                BuildableName = "Docz.app"
-               BlueprintName = "Docz"
-               ReferencedContainer = "container:Docz.xcodeproj">
+               BlueprintName = "EDITor"
+               ReferencedContainer = "container:EDITor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "301EB11515DCB6D0008421E8"
                BuildableName = "DoczTests.octest"
-               BlueprintName = "DoczTests"
-               ReferencedContainer = "container:Docz.xcodeproj">
+               BlueprintName = "EDITorTests"
+               ReferencedContainer = "container:EDITor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
             BuildableName = "Docz.app"
-            BlueprintName = "Docz"
-            ReferencedContainer = "container:Docz.xcodeproj">
+            BlueprintName = "EDITor"
+            ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
             BuildableName = "Docz.app"
-            BlueprintName = "Docz"
-            ReferencedContainer = "container:Docz.xcodeproj">
+            BlueprintName = "EDITor"
+            ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "301EB0F415DCB6CF008421E8"
             BuildableName = "Docz.app"
-            BlueprintName = "Docz"
-            ReferencedContainer = "container:Docz.xcodeproj">
+            BlueprintName = "EDITor"
+            ReferencedContainer = "container:EDITor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
