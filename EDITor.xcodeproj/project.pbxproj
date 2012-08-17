@@ -84,8 +84,8 @@
 		301EB0EA15DCB6CF008421E8 = {
 			isa = PBXGroup;
 			children = (
-				301EB0FF15DCB6CF008421E8 /* Docz */,
-				301EB11D15DCB6D0008421E8 /* DoczTests */,
+				301EB0FF15DCB6CF008421E8 /* EDITor */,
+				301EB11D15DCB6D0008421E8 /* EDITorTests */,
 				301EB0F815DCB6CF008421E8 /* Frameworks */,
 				301EB0F615DCB6CF008421E8 /* Products */,
 			);
@@ -111,7 +111,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		301EB0FF15DCB6CF008421E8 /* Docz */ = {
+		301EB0FF15DCB6CF008421E8 /* EDITor */ = {
 			isa = PBXGroup;
 			children = (
 				301EB10815DCB6CF008421E8 /* EDITorAppDelegate.h */,
@@ -123,6 +123,7 @@
 				301EB12F15DCB751008421E8 /* EDITorTableViewController.m */,
 				301EB10015DCB6CF008421E8 /* Supporting Files */,
 			);
+			name = EDITor;
 			path = Docz;
 			sourceTree = "<group>";
 		};
@@ -137,13 +138,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		301EB11D15DCB6D0008421E8 /* DoczTests */ = {
+		301EB11D15DCB6D0008421E8 /* EDITorTests */ = {
 			isa = PBXGroup;
 			children = (
 				301EB12315DCB6D0008421E8 /* EDITorTests.h */,
 				301EB12415DCB6D0008421E8 /* EDITorTests.m */,
 				301EB11E15DCB6D0008421E8 /* Supporting Files */,
 			);
+			name = EDITorTests;
 			path = DoczTests;
 			sourceTree = "<group>";
 		};
