@@ -74,8 +74,8 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
                                                            error:&error];
-    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
-    self.nodeArray = [EDINode createTsetEDINodeWithDictionary:tables];
+    NSDictionary *tables = [json objectForKey:@"TS_810"];
+    self.nodeArray = [EDINode createTsetEDINodeFromDictionary:tables];
     [self.tableView reloadData];
 }
 

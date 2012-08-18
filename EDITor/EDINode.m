@@ -24,9 +24,9 @@
     return self;
 }
 
-+ (NSArray *)createTsetEDINodeWithDictionary:(NSDictionary *)dict {
++ (NSArray *)createTsetEDINodeFromDictionary:(NSDictionary *)dict {
     NSMutableArray *models = [[NSMutableArray alloc] init];
-    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    [[dict objectForKey:@"collection"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
                                                  ediName:[obj objectForKey:@"fullName"]
                                                 nodeType:@"s"

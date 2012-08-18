@@ -20,6 +20,6 @@
           nodeType:(NSString *)nodeType
         collection:(id)collection;
 
-+ (NSArray *)createTsetEDINodeWithDictionary:(NSDictionary *)dict;
++ (NSArray *)createTsetEDINodeFromDictionary:(NSDictionary *)dict;
 
 @end
