@@ -32,10 +32,10 @@
                                                 nodeType:@"s"
                                               collection:[obj objectForKey:@"collection"]]];
     }];
-    return [models sortedArrayUsingComparator:^(id obj1, id obj2) {
+    return [models sortedArrayUsingComparator:^(EDINode *obj1, EDINode *obj2) {
         static NSString *sep = @"_";
-        NSString *name1 = [[((EDINode *)obj1).ediName componentsSeparatedByString:sep] lastObject];
-        NSString *name2 = [[((EDINode *)obj2).ediName componentsSeparatedByString:sep] lastObject];
+        NSString *name1 = [[obj1.ediName componentsSeparatedByString:sep] lastObject];
+        NSString *name2 = [[obj2.ediName componentsSeparatedByString:sep] lastObject];
         return [name1 caseInsensitiveCompare:name2];
     }];
 
