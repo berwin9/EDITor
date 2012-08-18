@@ -75,7 +75,7 @@
                                                          options:kNilOptions
                                                            error:&error];
     NSDictionary *tables = [json objectForKey:@"TS_810"];
-    self.nodeArray = [EDINode createTsetEDINodeFromDictionary:tables];
+    self.nodeArray = [EDINode createEDINodesFromDictionary:tables];
     [self.tableView reloadData];
 }
 

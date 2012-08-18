@@ -16,15 +16,15 @@
          collection:(id)collection {
     self = [super init];
     if (self) {
-        self.label = label;
-        self.ediName = ediName;
-        self.nodeType = nodeType;
-        self.collection = collection;
+        _label = label;
+        _ediName = ediName;
+        _nodeType = nodeType;
+        _collection = collection;
     }
     return self;
 }
 
-+ (NSArray *)createTsetEDINodeFromDictionary:(NSDictionary *)dict {
++ (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
     NSMutableArray *models = [[NSMutableArray alloc] init];
     [[dict objectForKey:@"collection"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]

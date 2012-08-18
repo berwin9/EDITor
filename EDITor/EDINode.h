@@ -16,10 +16,10 @@
 @property (nonatomic, copy) id collection;
 
 - (id)initWithLabel:(NSString *)label
-           ediName:(NSString *)ediName
-          nodeType:(NSString *)nodeType
-        collection:(id)collection;
+            ediName:(NSString *)ediName
+           nodeType:(NSString *)nodeType
+         collection:(id)collection;
 
-+ (NSArray *)createTsetEDINodeFromDictionary:(NSDictionary *)dict;
++ (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict;
 
 @end
