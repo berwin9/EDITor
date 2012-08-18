@@ -12,11 +12,7 @@
 #import "EDITorTableViewController.h"
 #import "EDINode.h"
 
-@interface EDITorTableViewController ()
-
-@property (strong) IBOutlet UISearchBar *nodeSearchBar;
-
--(IBAction)goToSearch:(id)sender;
+@interface EDITorTableViewController()
 
 @end
 
@@ -25,7 +21,7 @@
 -(id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+    
     }
     return self;
 }
@@ -38,12 +34,6 @@
                                withObject:data
                             waitUntilDone:YES];
     });
-    [self.nodeSearchBar setShowsScopeBar:NO];
-    [self.nodeSearchBar sizeToFit];
-    CGRect newBounds = self.tableView.bounds;
-    newBounds.origin.y = newBounds.origin.y + self.nodeSearchBar.bounds.size.height;
-    self.tableView.bounds = newBounds;
-
 }
 
 -(void)fetchData:(NSData *)responseData {
@@ -70,7 +60,6 @@
         ctr++;
     }
     self.nodeArray = [NSArray arrayWithArray:models];
-    self.filteredNodeArray = [NSMutableArray arrayWithCapacity:[self.nodeArray count]];
     [self.tableView reloadData];
 }
 
@@ -82,19 +71,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction)goToSearch:(id)sender {
-    [self.nodeSearchBar becomeFirstResponder];
-}
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [self.filteredNodeArray count];
-    }
     return [self.nodeArray count];
 }
 
@@ -107,44 +89,10 @@ numberOfRowsInSection:(NSInteger)section {
                                       reuseIdentifier:CellIdentifier];
     }
     EDINode *node = nil;
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        node = [self.filteredNodeArray objectAtIndex:indexPath.row];
-    } else {
-        node = [self.nodeArray objectAtIndex:indexPath.row];
-    }
+    node = [self.nodeArray objectAtIndex:indexPath.row];
     cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
-}
-
-#pragma mark - Content Filtering
--(void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope {
-    [self.filteredNodeArray removeAllObjects];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
-    NSArray *tempArray = [self.nodeArray filteredArrayUsingPredicate:predicate];
-    if (![scope isEqualToString:@"Header"]) {
-        NSPredicate *scopePredicate = [NSPredicate predicateWithFormat:@"SELF.category contains[c] %@", scope];
-        tempArray = [tempArray filteredArrayUsingPredicate:scopePredicate];
-    }
-    self.filteredNodeArray = [NSMutableArray arrayWithArray:tempArray];
-}
-
-#pragma mark - UISearchDisplayController Delegate Methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller
-shouldReloadTableForSearchString:(NSString *)searchString {
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
-    return YES;
-}
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller
-shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    [self filterContentForSearchText:self.searchDisplayController.searchBar.text
-                               scope:[[self.searchDisplayController.searchBar
-                                       scopeButtonTitles] objectAtIndex:searchOption]];
-    return YES;
 }
 
 //#pragma mark - TableView Delegate

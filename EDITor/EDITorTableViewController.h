@@ -12,6 +12,5 @@
 UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *nodeArray;
-@property (nonatomic, strong) NSMutableArray *filteredNodeArray;
 
 @end
