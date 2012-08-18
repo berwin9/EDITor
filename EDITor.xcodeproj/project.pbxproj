@@ -114,12 +114,9 @@
 		3043E8F715DE05FC00D73783 /* EDITor */ = {
 			isa = PBXGroup;
 			children = (
-				3043E8F815DE05FC00D73783 /* EDINode.h */,
-				3043E8F915DE05FC00D73783 /* EDINode.m */,
-				3043E8FC15DE05FC00D73783 /* EDITorAppDelegate.h */,
-				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
-				3043E8FE15DE05FC00D73783 /* EDITorTableViewController.h */,
-				3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */,
+				30FE378015E05D1A008E5E44 /* Controllers */,
+				30FE377D15E05CF9008E5E44 /* Models */,
+				30FE378115E05D3C008E5E44 /* Delegates */,
 				3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */,
 				3043E92015DE071500D73783 /* Supporting Files */,
 			);
@@ -146,6 +143,33 @@
 				3043E90015DE05FC00D73783 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30FE377D15E05CF9008E5E44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8F815DE05FC00D73783 /* EDINode.h */,
+				3043E8F915DE05FC00D73783 /* EDINode.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		30FE378015E05D1A008E5E44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */,
+				3043E8FE15DE05FC00D73783 /* EDITorTableViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30FE378115E05D3C008E5E44 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8FC15DE05FC00D73783 /* EDITorAppDelegate.h */,
+				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
