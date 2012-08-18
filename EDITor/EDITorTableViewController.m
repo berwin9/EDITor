@@ -18,7 +18,7 @@
 
 @implementation EDITorTableViewController
 
--(id)initWithStyle:(UITableViewStyle)style {
+- (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
     
@@ -26,7 +26,7 @@
     return self;
 }
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     dispatch_async(bgQueue, ^{
         NSData *data = [NSData dataWithContentsOfURL:localUrl];
@@ -36,7 +36,7 @@
     });
 }
 
--(void)fetchData:(NSData *)responseData {
+- (void)fetchData:(NSData *)responseData {
     NSError *error;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
@@ -63,25 +63,25 @@
     [self.tableView reloadData];
 }
 
--(void)viewDidUnload {
+- (void)viewDidUnload {
     [super viewDidUnload];
 }
 
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView
-numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     return [self.nodeArray count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"protoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {

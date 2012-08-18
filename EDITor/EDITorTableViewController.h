@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EDITorTableViewController:
-UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface EDITorTableViewController: UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *nodeArray;
 

@@ -10,15 +10,10 @@
 
 @implementation EDINode
 
-@synthesize label = _label;
-@synthesize ediName = _ediName;
-@synthesize nodeType = _nodeType;
-@synthesize collection = _collection;
-
--(id)initWithLabel:(NSString *)label
-           ediName:(NSString *)ediName
-          nodeType:(NSString *)nodeType
-        collection:(id)collection {
+- (id)initWithLabel:(NSString *)label
+            ediName:(NSString *)ediName
+           nodeType:(NSString *)nodeType
+         collection:(id)collection {
     self = [super init];
     if (self) {
         self.label = label;
@@ -29,7 +24,7 @@
     return self;
 }
 
-+(NSArray *)createModelPoolWithTsetDict:(NSDictionary *)tset {
++ (NSArray *)createModelPoolWithTsetDict:(NSDictionary *)tset {
     NSMutableArray *stack = [[NSMutableArray alloc] initWithCapacity:30];
     NSMutableArray *temp = [[NSMutableArray alloc] initWithCapacity:30];
     [stack addObject:tset];

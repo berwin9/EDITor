@@ -15,11 +15,11 @@
 @property (nonatomic, copy) NSString *nodeType;
 @property (nonatomic, copy) id collection;
 
--(id)initWithLabel:(NSString *)label
+- (id)initWithLabel:(NSString *)label
            ediName:(NSString *)ediName
           nodeType:(NSString *)nodeType
         collection:(id)collection;
 
-+(NSArray *)createModelPoolWithTsetDict:(NSDictionary *)json;
++ (NSArray *)createModelPoolWithTsetDict:(NSDictionary *)json;
 
 @end
