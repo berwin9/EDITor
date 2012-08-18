@@ -36,16 +36,6 @@
     });
 }
 
-- (void)fetchData:(NSData *)responseData {
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
-                                                         options:kNilOptions
-                                                           error:&error];
-    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
-    self.nodeArray = [EDINode createTsetEDINodeWithDictionary:tables];
-    [self.tableView reloadData];
-}
-
 - (void)viewDidUnload {
     [super viewDidUnload];
 }
@@ -76,6 +66,17 @@
     cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
+}
+
+#pragma mark - JSON Handler
+- (void)fetchData:(NSData *)responseData {
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                         options:kNilOptions
+                                                           error:&error];
+    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
+    self.nodeArray = [EDINode createTsetEDINodeWithDictionary:tables];
+    [self.tableView reloadData];
 }
 
 //#pragma mark - TableView Delegate
