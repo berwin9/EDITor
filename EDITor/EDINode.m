@@ -24,23 +24,21 @@
     return self;
 }
 
-+ (NSArray *)createModelPoolWithTsetDict:(NSDictionary *)tset {
-    NSMutableArray *stack = [[NSMutableArray alloc] initWithCapacity:30];
-    NSMutableArray *temp = [[NSMutableArray alloc] initWithCapacity:30];
-    [stack addObject:tset];
-    while ([stack count]) {
-        id cur = [stack lastObject];
-        [stack removeLastObject];
-        NSLog(@"stack type: %@", [cur class]);
-        for (NSDictionary *key in cur) {
-            NSLog(@"type: %@", [key class]);
-            NSLog(@"%@", key);
-//            NSDictionary *test = key;
-//            [stack addObject:key];
-            [temp addObject:key];
-        }
-    }
-    return temp;
++ (NSArray *)createTsetEDINodeWithDictionary:(NSDictionary *)dict {
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
+                                                 ediName:[obj objectForKey:@"fullName"]
+                                                nodeType:@"s"
+                                              collection:[obj objectForKey:@"collection"]]];
+    }];
+    return [models sortedArrayUsingComparator:^(id obj1, id obj2) {
+        static NSString *sep = @"_";
+        NSString *name1 = [[((EDINode *)obj1).ediName componentsSeparatedByString:sep] lastObject];
+        NSString *name2 = [[((EDINode *)obj2).ediName componentsSeparatedByString:sep] lastObject];
+        return [name1 caseInsensitiveCompare:name2];
+    }];
+
 }
 
 @end

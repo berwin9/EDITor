@@ -20,6 +20,6 @@
           nodeType:(NSString *)nodeType
         collection:(id)collection;
 
-+ (NSArray *)createModelPoolWithTsetDict:(NSDictionary *)json;
++ (NSArray *)createTsetEDINodeWithDictionary:(NSDictionary *)dict;
 
 @end

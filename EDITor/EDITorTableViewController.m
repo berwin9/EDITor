@@ -42,19 +42,7 @@
                                                          options:kNilOptions
                                                            error:&error];
     NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection"];
-    NSMutableArray *models = [[NSMutableArray alloc] init];    
-    [tables enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
-                                                 ediName:[obj objectForKey:@"fullName"]
-                                                nodeType:@"s"
-                                              collection:[obj objectForKey:@"collection"]]];
-    }];
-    self.nodeArray = [models sortedArrayUsingComparator:^(id obj1, id obj2) {
-        static NSString *sep = @"_";
-        NSString *name1 = [[((EDINode *)obj1).ediName componentsSeparatedByString:sep] lastObject];
-        NSString *name2 = [[((EDINode *)obj2).ediName componentsSeparatedByString:sep] lastObject];
-        return [name1 caseInsensitiveCompare:name2];
-    }];
+    self.nodeArray = [EDINode createTsetEDINodeWithDictionary:tables];
     [self.tableView reloadData];
 }
 
