@@ -48,8 +48,7 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.nodes count];
 }
 
@@ -61,8 +60,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:CellIdentifier];
     }
-    EDINode *node = nil;
-    node = [self.nodes objectAtIndex:indexPath.row];
+    EDINode *node = [self.nodes objectAtIndex:indexPath.row];
     cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
