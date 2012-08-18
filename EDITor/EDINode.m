@@ -1,6 +1,6 @@
 //
 //  EDINode.m
-//  Docz
+//  EDITor
 //
 //  Created by Erwin Mombay on 8/16/12.
 //  Copyright (c) 2012 win. All rights reserved.
@@ -25,6 +25,8 @@
 }
 
 + (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
+    static NSString *sep = @"_";
+    NSLog(@"%@", [dict class]);
     NSMutableArray *models = [[NSMutableArray alloc] init];
     [[dict objectForKey:@"collection"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
@@ -33,12 +35,10 @@
                                               collection:[obj objectForKey:@"collection"]]];
     }];
     return [models sortedArrayUsingComparator:^(EDINode *obj1, EDINode *obj2) {
-        static NSString *sep = @"_";
         NSString *name1 = [[obj1.ediName componentsSeparatedByString:sep] lastObject];
         NSString *name2 = [[obj2.ediName componentsSeparatedByString:sep] lastObject];
         return [name1 caseInsensitiveCompare:name2];
     }];
-
 }
 
 @end

@@ -37,7 +37,6 @@
                 </tableViewController>
                 <searchDisplayController id="G1D-xo-tRi">
                     <connections>
-                        <outlet property="delegate" destination="Knx-I5-TRB" id="c7R-XH-hDq"/>
                         <outlet property="searchContentsController" destination="Knx-I5-TRB" id="CwJ-dc-Nkp"/>
                         <outlet property="searchResultsDataSource" destination="Knx-I5-TRB" id="uUj-Zv-xXN"/>
                         <outlet property="searchResultsDelegate" destination="Knx-I5-TRB" id="Nr6-cL-dHG"/>

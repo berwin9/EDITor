@@ -1,6 +1,6 @@
 //
-//  DoczTests.m
-//  DoczTests
+//  EDITorTests.m
+//  EDITorTests
 //
 //  Created by Erwin Mombay on 8/16/12.
 //  Copyright (c) 2012 win. All rights reserved.
@@ -21,7 +21,7 @@
 }
 
 -(void)testExample {
-    STFail(@"Unit tests are not implemented yet in DoczTests");
+    STFail(@"Unit tests are not implemented yet in EDITorTests");
 }
 
 @end

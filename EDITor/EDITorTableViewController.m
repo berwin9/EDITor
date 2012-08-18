@@ -50,7 +50,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return [self.nodeArray count];
+    return [self.nodes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -62,7 +62,7 @@
                                       reuseIdentifier:CellIdentifier];
     }
     EDINode *node = nil;
-    node = [self.nodeArray objectAtIndex:indexPath.row];
+    node = [self.nodes objectAtIndex:indexPath.row];
     cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
@@ -74,8 +74,8 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
                                                            error:&error];
-    NSDictionary *tables = [json objectForKey:@"TS_810"];
-    self.nodeArray = [EDINode createEDINodesFromDictionary:tables];
+    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection.Table_2.collection.Loop_IT1_0100"];
+    self.nodes = [EDINode createEDINodesFromDictionary:tables];
     [self.tableView reloadData];
 }
 
@@ -83,21 +83,14 @@
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
 //}
-
+//
 //#pragma mark - Segue
 //-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //    if ([[segue identifier] isEqualToString:@"candyDetail"]) {
 //        UIViewController *candyDetailViewController = [segue destinationViewController];
 //        NSIndexPath *indexPath = nil;
 //        NSString *destinationTitle = nil;
-//        if (sender == self.searchDisplayController.searchResultsTableView) {
-//            indexPath = [self.searchDisplayController.searchResultsTableView
-//                         indexPathForSelectedRow];
-//            destinationTitle = [[self.filteredNodeArray objectAtIndex:[indexPath row]] name];
-//        } else {
-//            indexPath = [self.tableView indexPathForSelectedRow];
-//            destinationTitle = [[self.nodeArray objectAtIndex:[indexPath row]] name];
-//        }
+//        indexPath = [self.tableView indexPathForSelectedRow];
 //        [candyDetailViewController setTitle:destinationTitle];
 //    }
 //}
