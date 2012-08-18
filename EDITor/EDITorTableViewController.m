@@ -12,15 +12,15 @@
 #import "EDITorTableViewController.h"
 #import "EDINode.h"
 
-@interface EDITorTableViewController()
+@interface EDITorTableViewController ()
+
+@property (strong) IBOutlet UISearchBar *nodeSearchBar;
+
+-(IBAction)goToSearch:(id)sender;
 
 @end
 
 @implementation EDITorTableViewController
-
-@synthesize nodeArray = _nodeArray;
-@synthesize filteredNodeArray = _filteredNodeArray;
-@synthesize nodeSearchBar = _nodeSearchBar;
 
 -(id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -58,8 +58,9 @@
         NSString *name2 = [[[obj2 objectForKey:keyToComp] componentsSeparatedByString:sep] lastObject];
         return [name1 caseInsensitiveCompare:name2];
     }];
-    int ctr = 0;
+    NSUInteger ctr = 0;
     NSMutableArray *models = [[NSMutableArray alloc] init];
+    
     for (id key in tables) {
         NSDictionary *child = [tables objectForKey:[sortedKeys objectAtIndex:ctr]];
         [models addObject:[[EDINode alloc] initWithLabel:[child objectForKey:@"name"]

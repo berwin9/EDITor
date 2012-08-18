@@ -13,8 +13,5 @@ UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *nodeArray;
 @property (nonatomic, strong) NSMutableArray *filteredNodeArray;
-@property IBOutlet UISearchBar *nodeSearchBar;
-
--(IBAction)goToSearch:(id)sender;
 
 @end
