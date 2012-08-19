@@ -12,6 +12,10 @@
     NSMutableArray *stack;
 }
 
+@property (nonatomic,  weak) EDINode *curNode;
+@property (nonatomic) NSUInteger curDepth;
+@property (nonatomic) NSUInteger curIndex;
+
 @end
 
 @implementation EDITorTreeWalker
@@ -30,8 +34,19 @@
     return instance;
 }
 
+- (void)resetTarget:(EDINode *)root
+            curNode:(EDINode *)curNode
+           curDepth:(NSUInteger)curDepth
+           curIndex:(NSUInteger)curIndex {
+    [stack removeAllObjects];
+    self.root = nil;
+    self.curNode = nil;
+    self.curDepth = 0;
+    self.curIndex = 0;
+}
+
 - (void)setRoot:(EDINode *)root {
-    self.root = root;
+    [self resetTarget:root curNode:root curDepth:0 curIndex:0];
 }
 
 - (void)next {

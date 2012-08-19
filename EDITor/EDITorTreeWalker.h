@@ -18,6 +18,10 @@
 
 + (EDITorTreeWalker *)sharedManager;
 
+- (void)resetTarget:(EDINode *)root
+            curNode:(EDINode *)curNode
+           curDepth:(NSUInteger)curDepth
+           curIndex:(NSUInteger)curIndex;
 - (void)setRoot:(EDINode *)root;
 - (void)next;
 - (void)prev;
