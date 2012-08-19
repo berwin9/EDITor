@@ -1,6 +1,6 @@
 //
-//  CandyTableViewController.h
-//  CandySearch
+//  EDITorTableViewController.h
+//  EDITor
 //
 //  Created by Erwin Mombay on 8/15/12.
 //  Copyright (c) 2012 win. All rights reserved.
