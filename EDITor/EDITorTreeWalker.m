@@ -8,8 +8,6 @@
 
 #import "EDITorTreeWalker.h"
 
-static EDITorTreeWalker *instance;
-
 @interface EDITorTreeWalker() {
     NSMutableArray *stack;
 }
@@ -19,9 +17,15 @@ static EDITorTreeWalker *instance;
 @implementation EDITorTreeWalker
 
 + (EDITorTreeWalker *)getInstance {
-    if (instance == nil) {
-        instance = [self alloc];
-    }
+    static dispatch_once_t onceToken;
+    static EDITorTreeWalker *instance;
+    //: this creates a singleton that is thread-safe.
+    //: this seems to be the most idiomatic way to create
+    //: singletons in Obj-C and enforcing/asserting on the alloc/init
+    //: is frowned upon.
+    dispatch_once(&onceToken, ^{
+        instance = [[EDITorTreeWalker alloc] init];
+    });
     return instance;
 }
 

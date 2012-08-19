@@ -10,9 +10,12 @@
 #define localUrl [NSURL URLWithString:@"http://localhost:5000/document"]
 
 #import "EDITorTableViewController.h"
+#import "EDITorTreeWalker.h"
 #import "EDINode.h"
 
 @interface EDITorTableViewController()
+
+@property (nonatomic, strong) EDITorTreeWalker *visitor;
 
 @end
 
@@ -21,7 +24,6 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-    
     }
     return self;
 }
@@ -34,6 +36,7 @@
                                withObject:data
                             waitUntilDone:YES];
     });
+    self.visitor = [EDITorTreeWalker getInstance];
 }
 
 - (void)viewDidUnload {
@@ -72,7 +75,7 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
                                                            error:&error];
-    NSDictionary *tables = [json valueForKeyPath:@"TS_810.collection.Table_2.collection.Loop_IT1_0100"];
+    NSDictionary *tables = [json valueForKeyPath:@"TS_810"];
     self.nodes = [EDINode createEDINodesFromDictionary:tables];
     [self.tableView reloadData];
 }

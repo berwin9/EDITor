@@ -26,7 +26,6 @@
 
 + (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
     static NSString *sep = @"_";
-    NSLog(@"%@", [dict class]);
     NSMutableArray *models = [[NSMutableArray alloc] init];
     [[dict objectForKey:@"collection"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
