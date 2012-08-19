@@ -63,8 +63,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:CellIdentifier];
     }
+    static NSUInteger ctr = 0;
     EDINode *node = [self.nodes objectAtIndex:indexPath.row];
-    cell.textLabel.text = node.label;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %d", node.label, ctr++];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
