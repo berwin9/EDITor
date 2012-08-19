@@ -36,7 +36,7 @@
                                withObject:data
                             waitUntilDone:YES];
     });
-    self.visitor = [EDITorTreeWalker getInstance];
+    self.visitor = [EDITorTreeWalker sharedManager];
 }
 
 - (void)viewDidUnload {

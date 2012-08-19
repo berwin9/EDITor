@@ -16,7 +16,7 @@
 @property (nonatomic, readonly) NSUInteger curDepth;
 @property (nonatomic, readonly) NSUInteger curIndex;
 
-+ (EDITorTreeWalker *)getInstance;
++ (EDITorTreeWalker *)sharedManager;
 
 - (void)setRoot:(EDINode *)root;
 - (void)next;
