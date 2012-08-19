@@ -30,6 +30,28 @@ static EDITorTreeWalker *instance;
 }
 
 - (void)next {
+    //TODO: stub
+}
+
+- (void)prev {
+    //TODO: stub
+}
+
+- (void)up {
+    //TODO: stub
+}
+- (void)down {
+    //TODO: stub
+}
+
+- (EDINode *)parent {
+    //TODO: stub
+    return nil;
+}
+
+- (EDINode *)child {
+    //TODO: stub
+    return nil;
 }
 
 @end

@@ -19,7 +19,11 @@
 + (EDITorTreeWalker *)getInstance;
 
 - (void)setRoot:(EDINode *)root;
-
 - (void)next;
+- (void)prev;
+- (void)up;
+- (void)down;
+- (EDINode *)child;
+- (EDINode *)parent;
 
 @end

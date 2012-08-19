@@ -120,9 +120,8 @@
 				30FE378015E05D1A008E5E44 /* Controllers */,
 				30FE377D15E05CF9008E5E44 /* Models */,
 				30FE378115E05D3C008E5E44 /* Delegates */,
-				30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */,
-				30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */,
 				3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */,
+				30FE37AE15E0849E008E5E44 /* Helpers */,
 				3043E92015DE071500D73783 /* Supporting Files */,
 			);
 			path = EDITor;
@@ -175,6 +174,15 @@
 				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		30FE37AE15E0849E008E5E44 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */,
+				30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
