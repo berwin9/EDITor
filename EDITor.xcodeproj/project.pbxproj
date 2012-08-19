@@ -21,6 +21,7 @@
 		3043E91315DE060500D73783 /* EDITorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90F15DE060500D73783 /* EDITorTests.m */; };
 		3043E91415DE060500D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E91015DE060500D73783 /* InfoPlist.strings */; };
 		3043E91F15DE06B800D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90015DE05FC00D73783 /* InfoPlist.strings */; };
+		30FE37AC15E08461008E5E44 /* EDITorTreeWalker.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		3043E90E15DE060500D73783 /* EDITorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorTests.h; sourceTree = "<group>"; };
 		3043E90F15DE060500D73783 /* EDITorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorTests.m; sourceTree = "<group>"; };
 		3043E91115DE060500D73783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorTreeWalker.h; sourceTree = "<group>"; };
+		30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorTreeWalker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				30FE378015E05D1A008E5E44 /* Controllers */,
 				30FE377D15E05CF9008E5E44 /* Models */,
 				30FE378115E05D3C008E5E44 /* Delegates */,
+				30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */,
+				30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */,
 				3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */,
 				3043E92015DE071500D73783 /* Supporting Files */,
 			);
@@ -284,6 +289,7 @@
 				3043E90715DE05FC00D73783 /* EDITorAppDelegate.m in Sources */,
 				3043E90815DE05FC00D73783 /* EDITorTableViewController.m in Sources */,
 				3043E90B15DE05FC00D73783 /* main.m in Sources */,
+				30FE37AC15E08461008E5E44 /* EDITorTreeWalker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
