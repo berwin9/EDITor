@@ -6,16 +6,11 @@
 //  Copyright (c) 2012 win. All rights reserved.
 //
 
-#define bgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-#define localUrl [NSURL URLWithString:@"http://localhost:5000/document"]
 
 #import "EDITorTableViewController.h"
-#import "EDITorTreeWalker.h"
-#import "EDINode.h"
+#import "EDITorNavController.h"
 
 @interface EDITorTableViewController()
-
-@property (nonatomic, strong) EDITorTreeWalker *visitor;
 
 @end
 
@@ -28,19 +23,9 @@
     return self;
 }
 
-+ (EDITorTableViewController *)sharedMananger {
-    return nil;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dispatch_async(bgQueue, ^{
-        NSData *data = [NSData dataWithContentsOfURL:localUrl];
-        [self performSelectorOnMainThread:@selector(fetchData:)
-                               withObject:data
-                            waitUntilDone:YES];
-    });
-    self.visitor = [EDITorTreeWalker sharedManager];
+    self.nodes = ((EDITorNavController *)self.parentViewController).nodes;
 }
 
 - (void)viewDidUnload {
@@ -56,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.nodes count];
+    return [((EDITorNavController *)self.parentViewController).nodes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -73,26 +58,11 @@
     return cell;
 }
 
-#pragma mark - JSON Handler
-- (void)fetchData:(NSData *)responseData {
-    NSError *error;
-    //TODO: add error handling if json is empty
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
-                                                         options:kNilOptions
-                                                           error:&error];
-    
-    NSDictionary *tables = [json valueForKeyPath:@"TS_810"];
-    self.nodes = [EDINode createEDINodesFromDictionary:tables];
-    [self.tableView reloadData];
-}
-
-
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController =
-        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
-            instantiateViewControllerWithIdentifier:@"TableView"];
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
+                                            instantiateViewControllerWithIdentifier:@"TableView"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

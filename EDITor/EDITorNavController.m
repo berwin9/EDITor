@@ -7,8 +7,14 @@
 //
 
 #import "EDITorNavController.h"
+#import "EDITorTableViewController.h"
+
+#define bgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+#define localUrl [NSURL URLWithString:@"http://localhost:5000/document"]
 
 @interface EDITorNavController()
+
+@property (nonatomic, strong) EDITorTreeWalker *visitor;
 
 @end
 
@@ -25,7 +31,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    dispatch_async(bgQueue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:localUrl];
+        [self performSelectorOnMainThread:@selector(fetchData:)
+                               withObject:data
+                            waitUntilDone:YES];
+    });
+    self.visitor = [EDITorTreeWalker sharedManager];
 }
 
 - (void)viewDidUnload {
@@ -43,6 +55,27 @@
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
     return [super popViewControllerAnimated:animated];
+}
+
+#pragma mark - JSON Handler
+- (void)fetchData:(NSData *)responseData {
+    NSError *error;
+    @try {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                             options:kNilOptions
+                                                               error:&error];
+        NSDictionary *tables = [json valueForKeyPath:@"TS_810"];
+        self.nodes = [EDINode createEDINodesFromDictionary:tables];
+        [self reloadVisibleTableViewChild];
+    } @catch (NSException *exception) {
+        NSLog(@"Error: %@ Exception: %@", error, exception);
+    }
+}
+    
+- (void)reloadVisibleTableViewChild {
+    EDITorTableViewController *visibleChildTable = (EDITorTableViewController *)self.visibleViewController;
+    visibleChildTable.nodes = self.nodes;
+    [visibleChildTable.tableView reloadData];
 }
 
 @end

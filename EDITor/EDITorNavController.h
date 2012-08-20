@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDITorTreeWalker.h"
 
 @interface EDITorNavController : UINavigationController
+
+@property (nonatomic, strong) NSArray *nodes;
+
+- (void)reloadVisibleTableViewChild;
 
 @end
