@@ -26,7 +26,7 @@
     //: this creates a singleton that is thread-safe.
     //: this seems to be the most idiomatic way to create
     //: singletons in Obj-C as there is no good reason to do an
-    //: `enforced singleton` as the shared `singleton approach`
+    //: `enforced singleton` as the `shared singleton` approach
     //: is usually good enough
     dispatch_once(&onceToken, ^{
         instance = [[EDITorTreeWalker alloc] init];

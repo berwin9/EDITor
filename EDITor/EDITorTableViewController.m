@@ -16,6 +16,7 @@
 @interface EDITorTableViewController()
 
 @property (nonatomic, strong) EDITorTreeWalker *visitor;
+@property(nonatomic, assign) UIModalTransitionStyle style;
 
 @end
 
@@ -24,8 +25,13 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
+        _style = UIModalTransitionStyleFlipHorizontal;
     }
     return self;
+}
+
++ (EDITorTableViewController *)sharedMananger {
+    return nil;
 }
 
 - (void)viewDidLoad {
@@ -41,6 +47,14 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+}
+
+- (void)loadView {
+    [super loadView];
+//    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+//    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
+//    contentView.backgroundColor = [UIColor blackColor];
+//    self.view = contentView;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -73,28 +87,44 @@
 #pragma mark - JSON Handler
 - (void)fetchData:(NSData *)responseData {
     NSError *error;
+    //TODO: add error handling if json is empty
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                          options:kNilOptions
                                                            error:&error];
+    
     NSDictionary *tables = [json valueForKeyPath:@"TS_810"];
     self.nodes = [EDINode createEDINodesFromDictionary:tables];
     [self.tableView reloadData];
 }
 
-//#pragma mark - TableView Delegate
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
-//}
-//
-//#pragma mark - Segue
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:@"candyDetail"]) {
-//        UIViewController *candyDetailViewController = [segue destinationViewController];
-//        NSIndexPath *indexPath = nil;
-//        NSString *destinationTitle = nil;
-//        indexPath = [self.tableView indexPathForSelectedRow];
-//        [candyDetailViewController setTitle:destinationTitle];
-//    }
-//}
+
+#pragma mark - TableView Delegate
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [self performSegueWithIdentifier:@"Test" sender:tableView];
+    UIViewController *viewController =
+        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
+            instantiateViewControllerWithIdentifier:@"Nav"];
+    [self presentViewController:viewController animated:YES completion:NULL];
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"segued");
+}
+
+- (IBAction)next:(id)sender {
+    UIViewController *viewController =
+        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
+            instantiateViewControllerWithIdentifier:@"Nav"];
+    [self presentViewController:viewController animated:YES completion:NULL];
+}
+
+- (IBAction)back:(id)sender {
+    UIViewController *viewController =
+        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
+            instantiateViewControllerWithIdentifier:@"Nav"];
+    [self presentViewController:viewController animated:YES completion:NULL];
+}
 
 @end
