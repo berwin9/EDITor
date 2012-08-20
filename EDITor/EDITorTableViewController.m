@@ -16,7 +16,6 @@
 @interface EDITorTableViewController()
 
 @property (nonatomic, strong) EDITorTreeWalker *visitor;
-@property(nonatomic, assign) UIModalTransitionStyle style;
 
 @end
 
@@ -25,7 +24,6 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-        _style = UIModalTransitionStyleFlipHorizontal;
     }
     return self;
 }
@@ -63,15 +61,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"protoCell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:CellIdentifier];
     }
-    static NSUInteger ctr = 0;
     EDINode *node = [self.nodes objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %d", node.label, ctr++];
+    cell.textLabel.text = node.label;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
@@ -95,9 +92,7 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *viewController =
         [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
-            instantiateViewControllerWithIdentifier:@"Test"];
-    static NSUInteger ctrl = 0;
-    [viewController setTitle:[NSString stringWithFormat:@"stringy %d", ctrl++]];
+            instantiateViewControllerWithIdentifier:@"TableView"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
