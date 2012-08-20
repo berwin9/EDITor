@@ -30,27 +30,16 @@
                             <outlet property="delegate" destination="Knx-I5-TRB" id="fJu-iF-Dvl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="EDItor" id="cel-ov-D5t">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="aAb-aA-bkJ">
-                            <connections>
-                                <action selector="back:" destination="Knx-I5-TRB" id="g9N-8K-tR1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="Zg5-PQ-ON2">
-                            <connections>
-                                <action selector="next:" destination="Knx-I5-TRB" id="LtU-ah-Lnf"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="EDItor" id="cel-ov-D5t"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="210" y="-1000"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tor Nav Controller-->
         <scene sceneID="u3C-MI-xaZ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtV-B2-KiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="Nav" definesPresentationContext="YES" id="zCY-dR-Q36" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Nav" definesPresentationContext="YES" id="zCY-dR-Q36" customClass="EDITorNavController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8W9-sB-3sZ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -63,6 +52,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="EDITorNavController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EDITorNavController.h"/>
+        </class>
         <class className="EDITorTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EDITorTableViewController.h"/>
             <relationships>

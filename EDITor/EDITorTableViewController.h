@@ -12,7 +12,4 @@
 
 @property (nonatomic, strong) NSArray *nodes;
 
--(IBAction)next:(id)sender;
--(IBAction)back:(id)sender;
-
 @end

@@ -49,14 +49,6 @@
     [super viewDidUnload];
 }
 
-- (void)loadView {
-    [super loadView];
-//    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
-//    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
-//    contentView.backgroundColor = [UIColor blackColor];
-//    self.view = contentView;
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -101,30 +93,10 @@
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [self performSegueWithIdentifier:@"Test" sender:tableView];
     UIViewController *viewController =
         [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
-            instantiateViewControllerWithIdentifier:@"Nav"];
-    [self presentViewController:viewController animated:YES completion:NULL];
-}
-
-#pragma mark - Segue
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"segued");
-}
-
-- (IBAction)next:(id)sender {
-    UIViewController *viewController =
-        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
-            instantiateViewControllerWithIdentifier:@"Nav"];
-    [self presentViewController:viewController animated:YES completion:NULL];
-}
-
-- (IBAction)back:(id)sender {
-    UIViewController *viewController =
-        [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
-            instantiateViewControllerWithIdentifier:@"Nav"];
-    [self presentViewController:viewController animated:YES completion:NULL];
+            instantiateViewControllerWithIdentifier:@"Test"];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end
