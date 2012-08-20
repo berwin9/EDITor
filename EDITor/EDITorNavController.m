@@ -41,5 +41,9 @@
     [super pushViewController:viewController animated:animated];
 }
 
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated {
+    UIViewController *poppedView = [super popViewControllerAnimated:animated];
+    return poppedView;
+}
 
 @end

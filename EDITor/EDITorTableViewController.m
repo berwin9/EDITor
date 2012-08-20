@@ -96,6 +96,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *viewController =
         [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
             instantiateViewControllerWithIdentifier:@"Test"];
+    static NSUInteger ctrl = 0;
+    [viewController setTitle:[NSString stringWithFormat:@"stringy %d", ctrl++]];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

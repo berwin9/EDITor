@@ -19,7 +19,28 @@
             <BreakpointActionProxy
                ActionType = "Xcode.BreakpointAction.DebuggerCommand">
                <ActionContent
-                  consoleCommand = "po viewController">
+                  consoleCommand = "po [NSString stringWithFormat:@&quot;pushing %@&quot;, viewController];">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         filePath = "EDITor/EDITorNavController.m"
+         timestampString = "367129874.056262"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-popViewControllerAnimated:"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.DebuggerCommand">
+               <ActionContent
+                  consoleCommand = "po [NSString stringWithFormat:@&quot;popped %@&quot;, poppedView];">
                </ActionContent>
             </BreakpointActionProxy>
          </Actions>
