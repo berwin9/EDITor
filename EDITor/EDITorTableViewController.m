@@ -60,8 +60,10 @@
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView
     didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
+    UITableViewController *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL]
                                             instantiateViewControllerWithIdentifier:@"TableView"];
+    EDINode *node = [self.nodes objectAtIndex:indexPath.row];
+    viewController.title = node.label;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

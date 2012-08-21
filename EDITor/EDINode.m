@@ -24,6 +24,14 @@
     return self;
 }
 
+- (id)getCollection {
+    if ([NSArray isKindOfClass:[_collection class]]) {
+        return _collection;
+    }
+    _collection = [EDINode createEDINodesFromDictionary:_collection];
+    return _collection;
+}
+
 + (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
     static NSString *sep = @"_";
     NSMutableArray *models = [[NSMutableArray alloc] init];
