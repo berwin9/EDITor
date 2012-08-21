@@ -64,8 +64,7 @@
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
                                                              options:kNilOptions
                                                                error:&error];
-        NSDictionary *tables = [json valueForKeyPath:@"TS_810"];
-        self.nodes = [EDINode createEDINodesFromDictionary:tables];
+        self.node = [EDINode createEDINodeFromDictionary:json withKey:@"TS_810"];
         [self reloadVisibleTableViewChild];
     } @catch (NSException *exception) {
         NSLog(@"Error: %@ Exception: %@", error, exception);
@@ -74,7 +73,7 @@
     
 - (void)reloadVisibleTableViewChild {
     EDITorTableViewController *visibleChildTable = (EDITorTableViewController *)self.visibleViewController;
-    visibleChildTable.nodes = self.nodes;
+    visibleChildTable.nodes = self.node.collection;
     [visibleChildTable.tableView reloadData];
 }
 

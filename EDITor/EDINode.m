@@ -40,4 +40,12 @@
     }];
 }
 
++ (EDINode *)createEDINodeFromDictionary:(NSDictionary *)dict withKey:(NSString *)key {
+    NSDictionary *node = [dict objectForKey:key];
+    return [[EDINode alloc] initWithLabel:[node objectForKey:@"name"]
+                                  ediName:[node objectForKey:@"fullName"]
+                                 nodeType:@"s"
+                               collection:[EDINode createEDINodesFromDictionary:node]];
+}
+
 @end

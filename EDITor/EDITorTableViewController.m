@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.nodes = ((EDITorNavController *)self.parentViewController).nodes;
 }
 
 - (void)viewDidUnload {
@@ -41,7 +40,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [((EDITorNavController *)self.parentViewController).nodes count];
+    return [self.nodes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView

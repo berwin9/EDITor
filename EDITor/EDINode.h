@@ -22,4 +22,6 @@
 
 + (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict;
 
++ (EDINode *)createEDINodeFromDictionary:(NSDictionary *)dict withKey:(NSString *)key;
+
 @end

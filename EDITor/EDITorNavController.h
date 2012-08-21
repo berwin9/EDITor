@@ -11,7 +11,7 @@
 
 @interface EDITorNavController : UINavigationController
 
-@property (nonatomic, strong) NSArray *nodes;
+@property (nonatomic, strong) EDINode *node;
 
 - (void)reloadVisibleTableViewChild;
 
