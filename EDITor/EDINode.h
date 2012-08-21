@@ -1,6 +1,6 @@
 //
 //  EDINode.h
-//  Docz
+//  EDITor
 //
 //  Created by Erwin Mombay on 8/16/12.
 //  Copyright (c) 2012 win. All rights reserved.
@@ -15,11 +15,13 @@
 @property (nonatomic, copy) NSString *nodeType;
 @property (nonatomic, copy) id collection;
 
--(id)initWithLabel:(NSString *)label
-           ediName:(NSString *)ediName
-          nodeType:(NSString *)nodeType
-        collection:(id)collection;
+- (id)initWithLabel:(NSString *)label
+            ediName:(NSString *)ediName
+           nodeType:(NSString *)nodeType
+         collection:(id)collection;
 
-+(NSArray *)createModelPoolWithTsetDict:(NSDictionary *)json;
++ (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict;
+
++ (EDINode *)createEDINodeFromDictionary:(NSDictionary *)dict withKey:(NSString *)key;
 
 @end

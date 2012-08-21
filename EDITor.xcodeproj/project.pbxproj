@@ -21,6 +21,8 @@
 		3043E91315DE060500D73783 /* EDITorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043E90F15DE060500D73783 /* EDITorTests.m */; };
 		3043E91415DE060500D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E91015DE060500D73783 /* InfoPlist.strings */; };
 		3043E91F15DE06B800D73783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3043E90015DE05FC00D73783 /* InfoPlist.strings */; };
+		30708CA615E1E8FE0093F4C1 /* EDITorNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30708CA515E1E8FE0093F4C1 /* EDITorNavController.m */; };
+		30FE37AC15E08461008E5E44 /* EDITorTreeWalker.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		3043E90E15DE060500D73783 /* EDITorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorTests.h; sourceTree = "<group>"; };
 		3043E90F15DE060500D73783 /* EDITorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorTests.m; sourceTree = "<group>"; };
 		3043E91115DE060500D73783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30708CA415E1E8FE0093F4C1 /* EDITorNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorNavController.h; sourceTree = "<group>"; };
+		30708CA515E1E8FE0093F4C1 /* EDITorNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorNavController.m; sourceTree = "<group>"; };
+		30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDITorTreeWalker.h; sourceTree = "<group>"; };
+		30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDITorTreeWalker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +120,11 @@
 		3043E8F715DE05FC00D73783 /* EDITor */ = {
 			isa = PBXGroup;
 			children = (
-				3043E8F815DE05FC00D73783 /* EDINode.h */,
-				3043E8F915DE05FC00D73783 /* EDINode.m */,
-				3043E8FC15DE05FC00D73783 /* EDITorAppDelegate.h */,
-				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
-				3043E8FE15DE05FC00D73783 /* EDITorTableViewController.h */,
-				3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */,
+				30FE378015E05D1A008E5E44 /* Controllers */,
+				30FE377D15E05CF9008E5E44 /* Models */,
+				30FE378115E05D3C008E5E44 /* Delegates */,
 				3043E90215DE05FC00D73783 /* MainStoryboard.storyboard */,
+				30FE37AE15E0849E008E5E44 /* Helpers */,
 				3043E92015DE071500D73783 /* Supporting Files */,
 			);
 			path = EDITor;
@@ -146,6 +150,44 @@
 				3043E90015DE05FC00D73783 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30FE377D15E05CF9008E5E44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8F815DE05FC00D73783 /* EDINode.h */,
+				3043E8F915DE05FC00D73783 /* EDINode.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		30FE378015E05D1A008E5E44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30708CA415E1E8FE0093F4C1 /* EDITorNavController.h */,
+				30708CA515E1E8FE0093F4C1 /* EDITorNavController.m */,
+				3043E8FF15DE05FC00D73783 /* EDITorTableViewController.m */,
+				3043E8FE15DE05FC00D73783 /* EDITorTableViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30FE378115E05D3C008E5E44 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3043E8FC15DE05FC00D73783 /* EDITorAppDelegate.h */,
+				3043E8FD15DE05FC00D73783 /* EDITorAppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		30FE37AE15E0849E008E5E44 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30FE37AA15E08461008E5E44 /* EDITorTreeWalker.h */,
+				30FE37AB15E08461008E5E44 /* EDITorTreeWalker.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +302,8 @@
 				3043E90715DE05FC00D73783 /* EDITorAppDelegate.m in Sources */,
 				3043E90815DE05FC00D73783 /* EDITorTableViewController.m in Sources */,
 				3043E90B15DE05FC00D73783 /* main.m in Sources */,
+				30FE37AC15E08461008E5E44 /* EDITorTreeWalker.m in Sources */,
+				30708CA615E1E8FE0093F4C1 /* EDITorNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +374,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -351,10 +396,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -365,9 +411,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "EDITor/EDITor-Info.plist";
 				PRODUCT_NAME = EDITor;
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -377,9 +424,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EDITor/EDITor-Prefix.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "EDITor/EDITor-Info.plist";
 				PRODUCT_NAME = EDITor;
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

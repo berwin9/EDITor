@@ -1,6 +1,6 @@
 //
-//  DoczTests.h
-//  DoczTests
+//  EDITorTests.h
+//  EDITorTests
 //
 //  Created by Erwin Mombay on 8/16/12.
 //  Copyright (c) 2012 win. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  EDINode.m
-//  Docz
+//  EDITor
 //
 //  Created by Erwin Mombay on 8/16/12.
 //  Copyright (c) 2012 win. All rights reserved.
@@ -10,42 +10,42 @@
 
 @implementation EDINode
 
-@synthesize label = _label;
-@synthesize ediName = _ediName;
-@synthesize nodeType = _nodeType;
-@synthesize collection = _collection;
-
--(id)initWithLabel:(NSString *)label
-           ediName:(NSString *)ediName
-          nodeType:(NSString *)nodeType
-        collection:(id)collection {
+- (id)initWithLabel:(NSString *)label
+            ediName:(NSString *)ediName
+           nodeType:(NSString *)nodeType
+         collection:(id)collection {
     self = [super init];
     if (self) {
-        self.label = label;
-        self.ediName = ediName;
-        self.nodeType = nodeType;
-        self.collection = collection;
+        _label = label;
+        _ediName = ediName;
+        _nodeType = nodeType;
+        _collection = collection;
     }
     return self;
 }
 
-+(NSArray *)createModelPoolWithTsetDict:(NSDictionary *)tset {
-    NSMutableArray *stack = [[NSMutableArray alloc] initWithCapacity:30];
-    NSMutableArray *temp = [[NSMutableArray alloc] initWithCapacity:30];
-    [stack addObject:tset];
-    while ([stack count]) {
-        id cur = [stack lastObject];
-        [stack removeLastObject];
-        NSLog(@"stack type: %@", [cur class]);
-        for (NSDictionary *key in cur) {
-            NSLog(@"type: %@", [key class]);
-            NSLog(@"%@", key);
-//            NSDictionary *test = key;
-//            [stack addObject:key];
-            [temp addObject:key];
-        }
-    }
-    return temp;
++ (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
+    static NSString *sep = @"_";
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    [[dict objectForKey:@"collection"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
+                                                 ediName:[obj objectForKey:@"fullName"]
+                                                nodeType:@"s"
+                                              collection:[obj objectForKey:@"collection"]]];
+    }];
+    return [models sortedArrayUsingComparator:^(EDINode *obj1, EDINode *obj2) {
+        NSString *name1 = [[obj1.ediName componentsSeparatedByString:sep] lastObject];
+        NSString *name2 = [[obj2.ediName componentsSeparatedByString:sep] lastObject];
+        return [name1 caseInsensitiveCompare:name2];
+    }];
+}
+
++ (EDINode *)createEDINodeFromDictionary:(NSDictionary *)dict withKey:(NSString *)key {
+    NSDictionary *node = [dict objectForKey:key];
+    return [[EDINode alloc] initWithLabel:[node objectForKey:@"name"]
+                                  ediName:[node objectForKey:@"fullName"]
+                                 nodeType:@"s"
+                               collection:[EDINode createEDINodesFromDictionary:node]];
 }
 
 @end
