@@ -10,6 +10,8 @@
 
 @implementation EDINode
 
+@synthesize collection = _collection;
+
 - (id)initWithLabel:(NSString *)label
             ediName:(NSString *)ediName
            nodeType:(NSString *)nodeType
@@ -24,6 +26,14 @@
     return self;
 }
 
+- (id)collection {
+    if ([_collection isKindOfClass:[NSArray class]]) {
+        return _collection;
+    }
+    _collection = [EDINode createEDINodesFromDictionary:_collection];
+    return _collection;
+}
+
 + (NSArray *)createEDINodesFromDictionary:(NSDictionary *)dict {
     static NSString *sep = @"_";
     NSMutableArray *models = [[NSMutableArray alloc] init];
@@ -31,7 +41,7 @@
         [models addObject:[[EDINode alloc] initWithLabel:[obj objectForKey:@"name"]
                                                  ediName:[obj objectForKey:@"fullName"]
                                                 nodeType:@"s"
-                                              collection:[obj objectForKey:@"collection"]]];
+                                              collection:obj]];
     }];
     return [models sortedArrayUsingComparator:^(EDINode *obj1, EDINode *obj2) {
         NSString *name1 = [[obj1.ediName componentsSeparatedByString:sep] lastObject];
