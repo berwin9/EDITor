@@ -10,10 +10,10 @@
 
 @interface EDINode : NSObject
 
-@property (nonatomic, copy) NSString *label;
-@property (nonatomic, copy) NSString *ediName;
-@property (nonatomic, copy) NSString *nodeType;
-@property (nonatomic, copy) id collection;
+@property (nonatomic, readonly, copy) NSString *label;
+@property (nonatomic, readonly, copy) NSString *ediName;
+@property (nonatomic, readonly, copy) NSString *nodeType;
+@property (nonatomic, readonly, copy) id collection;
 
 - (id)initWithLabel:(NSString *)label
             ediName:(NSString *)ediName
