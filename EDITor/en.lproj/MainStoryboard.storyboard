@@ -51,6 +51,14 @@
             <point key="canvasLocation" x="-324" y="-1000"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EDITorNavController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EDITorNavController.h"/>
+        </class>
+        <class className="EDITorTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EDITorTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

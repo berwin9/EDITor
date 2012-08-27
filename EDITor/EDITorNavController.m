@@ -67,7 +67,7 @@
         self.node = [EDINode createEDINodeFromDictionary:json withKey:@"TS_810"];
         [self reloadVisibleTableViewChild];
     } @catch (NSException *exception) {
-        NSLog(@"Error: %@ Exception: %@", error, exception);
+        NSLog(@"Error(fetchData): %@ Exception: %@", error, exception);
     }
 }
     
